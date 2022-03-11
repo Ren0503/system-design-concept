@@ -2,7 +2,7 @@
 
 ![](./assets/background.jpg)
 
-Chắc hẳn bạn đã thấy nước chảy ra từ đường ống như thế nào rồi đúng không! Lưu lượng của nước có thể khác nhau, nghĩa là đôi khi lưu lượng có thể ít và đôi khi lưu lượng nhiều, nhưng có một giới hạn đối với lưu lượng tối đa mà nước có thể đi ra từ một đường ống và đó là năng lực của nó. Thông lượng là một khái niệm cơ bản trong khoa học Máy tính và mạng truyền thông, tương tự như lưu lượng nước trong đường ống. Trong bài viết này, chúng ta sẽ nói về thông lượng và tầm quan trọng của nó trong việc thiết kế bất kỳ hệ thống máy tính nào. Bài viết này sẽ giúp bạn hiểu rõ hơn về cách diễn giải khái niệm của thông lượng. Bắt đầu đi sâu vào nào :)
+Chắc hẳn bạn đã thấy nước chảy ra từ đường ống như thế nào rồi đúng không! Lưu lượng của nước có thể khác nhau, nghĩa là đôi khi lưu lượng có thể ít và đôi khi lưu lượng nhiều, nhưng có một giới hạn đối với lưu lượng tối đa mà nước có thể đi ra từ một đường ống và đó là năng lực của nó. Thông lượng là một khái niệm cơ bản trong khoa học máy tính và mạng truyền thông, tương tự như lưu lượng nước trong đường ống. Trong bài viết này, chúng ta sẽ nói về thông lượng và tầm quan trọng của nó trong việc thiết kế bất kỳ hệ thống máy tính nào. Bài viết này sẽ giúp bạn hiểu rõ hơn về cách diễn giải khái niệm của thông lượng. Bắt đầu đi sâu vào nào :)
 
 ## Thông lượng là gì?
 
@@ -14,7 +14,7 @@ Giả sử một dây chuyền lắp ráp đang sản xuất ô tô. Hãy xem x�
 
 Độ trễ được định nghĩa là khoảng thời gian từ khi đưa ra yêu cầu đến khi bắt đầu thấy kết quả. Nó được đo bằng đơn vị thời gian. Độ trễ luôn bị hiểu nhầm với thông lượng, và điều hiển nhiên là các hệ thống thông lượng cao phải có độ trễ thấp. Tuy nhiên, điều này có thể không phải lúc nào cũng đúng. Hãy xem xét việc xử lý dữ liệu liên quan đến ổ đĩa, có xu hướng có thông lượng lớn nhưng không cung cấp độ trễ thấp.
 
-Tương tự, trong các kết nối được nối mạng, độ trễ tăng theo thông lượng. Với sự gia tăng thông lượng, ngày càng nhiều gói tin sẽ có trên đường dẫn và góp phần làm tăng độ trễ. Nó cũng có thể có các hệ thống có thông lượng thấp và độ trễ thấp. Do đó, sự kết hợp giữa độ trễ và thông lượng được lựa chọn tốt nhất bằng cách xem xét hệ thống và các yêu cầu nghiệp.
+Tương tự, trong các kết nối được nối mạng, độ trễ tăng theo thông lượng. Với sự gia tăng thông lượng, ngày càng nhiều gói tin sẽ có trên đường dẫn và góp phần làm tăng độ trễ. Nó cũng có thể có các hệ thống có thông lượng thấp và độ trễ thấp. Do đó, sự kết hợp giữa độ trễ và thông lượng được lựa chọn tốt nhất bằng cách xem xét các yêu cầu nghiệp của hệ thống.
 
 ## Các yếu tố ảnh hưởng đến thông lượng
 
