@@ -1,20 +1,22 @@
 # Thông lượng
 
-![](./assets/background.jpg)
+<div align="center">
+    <img src="./assets/background.jpg" />
+</div>
 
-Chắc hẳn bạn đã thấy nước chảy ra từ đường ống như thế nào rồi đúng không! Lưu lượng của nước có thể khác nhau, nghĩa là đôi khi lưu lượng có thể ít và đôi khi lưu lượng nhiều, nhưng có một giới hạn đối với lưu lượng tối đa mà nước có thể đi ra từ một đường ống và đó là năng lực của nó. Thông lượng là một khái niệm cơ bản trong khoa học máy tính và mạng truyền thông, tương tự như lưu lượng nước trong đường ống. Trong bài viết này, chúng ta sẽ nói về thông lượng và tầm quan trọng của nó trong việc thiết kế bất kỳ hệ thống máy tính nào. Bài viết này sẽ giúp bạn hiểu rõ hơn về cách diễn giải khái niệm của thông lượng. Bắt đầu đi sâu vào nào :)
+Chắc hẳn bạn đã thấy nước chảy ra từ đường ống như thế nào rồi đúng không! Lưu lượng của nước có thể khác nhau, nghĩa là đôi khi lưu lượng có thể ít và đôi khi lưu lượng nhiều, nhưng có một giới hạn đối với lưu lượng tối đa mà nước có thể đi ra từ một đường ống và đó là dung tích của nó. Thông lượng là một khái niệm cơ bản trong khoa học máy tính và mạng truyền thông, tương tự như dòng nước chảy trong đường ống. Trong bài viết này, chúng ta sẽ nói về thông lượng và tầm quan trọng của nó trong việc thiết kế bất kỳ hệ thống máy tính nào. Bài viết này sẽ giúp bạn hiểu rõ hơn về cách diễn giải khái niệm của thông lượng. Bắt đầu đi sâu vào nào :)
 
 ## Thông lượng là gì?
 
 Thông lượng được định nghĩa là tổng số mục được xử lý trên một đơn vị thời gian, hay có thể nói thông lượng là tốc độ sản xuất một thứ gì đó. Nó thường được biểu thị bằng số lượng bit được truyền mỗi giây hoặc số lượng hoạt động HTTP mỗi ngày. Thông lượng của hệ thống thường có được bằng cách cộng tất cả các mục và chia tổng cho khoảng mẫu. Đây là một cách tiêu chuẩn để có được thông lượng, nhưng nó lại bỏ qua các biến thể tốc độ xử lý. Hãy lấy một ví dụ để hiểu rõ hơn về cách có được thông lượng :)
 
-Giả sử một dây chuyền lắp ráp đang sản xuất ô tô. Hãy xem xét nhà máy có thể sản xuất khoảng 100 xe ô tô mỗi ngày. Như vậy thông lượng của nó là **~ 100 xe/ngày**.
+Giả sử một dây chuyền lắp ráp đang sản xuất ô tô. Nếu nhà máy có thể sản xuất khoảng 100 xe ô tô mỗi ngày. Như vậy thông lượng của nó là **~ 100 xe/ngày**.
 
 ### Quan niệm sai với độ trễ
 
 Độ trễ được định nghĩa là khoảng thời gian từ khi đưa ra yêu cầu đến khi bắt đầu thấy kết quả. Nó được đo bằng đơn vị thời gian. Độ trễ luôn bị hiểu nhầm với thông lượng, và điều hiển nhiên là các hệ thống thông lượng cao phải có độ trễ thấp. Tuy nhiên, điều này có thể không phải lúc nào cũng đúng. Hãy xem xét việc xử lý dữ liệu liên quan đến ổ đĩa, có xu hướng có thông lượng lớn nhưng không cung cấp độ trễ thấp.
 
-Tương tự, trong các kết nối được nối mạng, độ trễ tăng theo thông lượng. Với sự gia tăng thông lượng, ngày càng nhiều gói tin sẽ có trên đường dẫn và góp phần làm tăng độ trễ. Nó cũng có thể có các hệ thống có thông lượng thấp và độ trễ thấp. Do đó, sự kết hợp giữa độ trễ và thông lượng được lựa chọn tốt nhất bằng cách xem xét các yêu cầu nghiệp của hệ thống.
+Tương tự, trong các kết nối được nối mạng, độ trễ tăng theo thông lượng. Với sự gia tăng thông lượng, ngày càng nhiều gói tin sẽ có trên đường dẫn và góp phần làm tăng độ trễ. Cũng có thể có các hệ thống có thông lượng thấp và độ trễ thấp. Do đó, sự kết hợp giữa độ trễ và thông lượng được lựa chọn tốt nhất bằng cách xem xét các yêu cầu nghiệp vụ của hệ thống.
 
 ## Các yếu tố ảnh hưởng đến thông lượng
 
