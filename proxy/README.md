@@ -6,68 +6,68 @@ Trong bài viết này ta sẽ học về Proxy, một khái niệm quan trọng
 
 ## Proxy là gì?
 
-Proxy về cơ bản là một máy chủ đóng vai trò trung gian giữa một máy khách và một máy chủ khác. Khi các máy khách này gửi yêu cầu đến các trang web trên Internet, máy chủ proxy sẽ chặn các yêu cầu này, sau đó giao tiếp với máy chủ thay mặt cho các máy khách này, giống như một bước chuyển tiếp cho phép chúng ta thực hiện điều gì đó trước hoặc sau khi yêu cầu được chuyển đến đích gốc.
+Proxy về cơ bản là một server đóng vai trò trung gian giữa một client và một server khác. Khi các máy client gửi yêu cầu đến các trang web trên Internet, proxy server sẽ chặn các yêu cầu này, sau đó giao tiếp với server thay mặt cho các máy client này, giống như một bước chuyển tiếp cho phép chúng ta thực hiện điều gì đó trước hoặc sau khi yêu cầu được chuyển đến đích gốc.
 
 ![](./assets/proxy.png)
 
 ## Proxy hoạt động như thế nào?
 
-Một proxy hoạt động thay mặt cho một khách hàng hoặc một nhóm khách hàng. Khi máy khách muốn giao tiếp với máy chủ, giả sử proxy đã được máy khách định cấu hình chính xác, khi máy khách đưa ra yêu cầu tới máy chủ, thay vì trực tiếp đến máy chủ, nó sẽ đi tới proxy, sau đó sẽ chuyển tiếp yêu cầu đến máy chủ. Vì vậy, về cơ bản, điều sẽ xảy ra là một ứng dụng khách đưa ra một yêu cầu có nghĩa là đi tới máy chủ nhưng trước tiên đi tới proxy để giao tiếp với máy chủ thay mặt cho khách hàng.
+Một proxy hoạt động thay mặt cho một hoặc một nhóm client. Khi client muốn giao tiếp với server, giả sử proxy đã được client xác định cấu hình chính xác, khi client đưa ra yêu cầu tới server, thay vì trực tiếp đến server, nó sẽ đi tới proxy, sau đó sẽ chuyển tiếp yêu cầu đến server. Vì vậy, về cơ bản, điều sẽ xảy ra là một ứng dụng client đưa ra một yêu cầu có nghĩa là đi tới server nhưng trước tiên đi tới proxy để giao tiếp với server thay mặt cho clients.
 
 ![](./assets/work.png)
 
 ## Proxy được dùng ở đâu?
 
-Máy chủ proxy không chỉ được sử dụng để ẩn danh tính của máy khách khỏi máy chủ, mà thay vào đó nó còn có nhiều cách sử dụng khác.
-1. Máy chủ proxy được sử dụng để quản lý các yêu cầu và phản hồi.
-2. Nó được sử dụng để lọc, ghi nhật ký và chuyển đổi các yêu cầu bằng cách thêm và xóa các tiêu đề.
-3. Nếu một số máy khách truy cập vào một tài nguyên cụ thể, máy chủ proxy có thể lưu vào bộ nhớ cache và phản hồi cho tất cả các máy khách mà không cần gửi yêu cầu đến máy chủ nhiều lần.
-4. Nó cũng được sử dụng như một bộ cân bằng tải giữa các máy chủ.
+Proxy không chỉ được sử dụng để ẩn danh tính của client khỏi server, mà thay vào đó nó còn có nhiều cách sử dụng khác.
+1. Máy proxy được sử dụng để quản lý các yêu cầu và phản hồi.
+2. Nó được sử dụng để lọc, ghi log và chuyển đổi các yêu cầu bằng cách thêm và xóa các tiêu đề.
+3. Nếu một số máy client truy cập vào một tài nguyên cụ thể, proxy có thể lưu vào bộ nhớ cache và phản hồi cho tất cả các client mà không cần gửi yêu cầu đến server nhiều lần.
+4. Nó cũng được sử dụng như một bộ cân bằng tải giữa các server.
 
 ## Forward Proxy 
 
-Forward Proxy thường gọi nhanh là proxy, là một máy chủ nằm giữa máy khách và máy chủ. Hãy để xem xét một ví dụ:
+Forward Proxy thường gọi nhanh là proxy, là một proxy nằm giữa client và server. Hãy để xem xét một ví dụ:
 
 ![](./assets/forward.png)
 
-Ở đây, thay vì gửi yêu cầu trực tiếp đến máy chủ, các yêu cầu được gửi đến một proxy chuyển tiếp, sau đó sẽ gửi yêu cầu đến máy chủ.
+Ở đây, thay vì gửi yêu cầu trực tiếp đến server, các yêu cầu được gửi đến một proxy chuyển tiếp, sau đó sẽ gửi yêu cầu đến server.
 
-Các proxy chuyển tiếp được sử dụng như một người trung gian thay vì tương tác trực tiếp với các máy chủ vì nhiều lý do như để tránh các hạn chế duyệt web, để truy cập nội dung bị chặn hoặc để bảo vệ danh tính của họ trực tuyến.
+Các forward proxy được sử dụng như một người trung gian thay vì tương tác trực tiếp với các server vì nhiều lý do như để tránh các hạn chế duyệt web, để truy cập nội dung bị chặn hoặc để bảo vệ danh tính trực tuyến của họ.
 
 ## Reverse Proxy
 
-Reverse Proxy là một máy chủ proxy nằm giữa một hoặc nhiều máy chủ. Các proxy ngược hoàn toàn trái ngược với proxy chuyển tiếp về mô hình tương tác của chúng. Một proxy chuyển tiếp hoạt động thay mặt cho khách hàng, trong đó proxy ngược hoạt động thay mặt cho máy chủ.
+Reverse Proxy là một proxy nằm giữa một hoặc nhiều server. Các proxy này hoàn toàn trái ngược với forward proxy về mô hình tương tác của chúng. Một forward proxy hoạt động thay mặt cho client, trong khi đó reverse proxy hoạt động thay mặt cho server.
 
 ![](./assets/reverse.png)
 
-Trong trường hợp này, khi một máy khách gửi một yêu cầu đến máy chủ, yêu cầu thực sự đi đến Reverse Proxy mà máy khách không biết về nó. Máy khách nghĩ rằng nó đang tương tác trực tiếp với máy chủ và đối với máy khách, không có máy chủ nào khác ở đây và nó nghĩ rằng máy chủ mà nó đang tương tác là máy chủ mà nó muốn gửi yêu cầu. Chúng ta hãy lấy một ví dụ:
+Trong trường hợp này, khi một client gửi một yêu cầu đến server, yêu cầu thực sự đi đến Reverse Proxy mà client không biết về nó. Client nghĩ rằng nó đang tương tác trực tiếp với server và đối với client, không có server nào khác ở đây và nó nghĩ rằng server mà nó đang tương tác là server mà nó muốn gửi yêu cầu. Chúng ta hãy lấy một ví dụ:
 
-> "Giả sử, nếu chúng tôi nhập https://www.enjoyalgorithm.com trong trình duyệt của mình, trình duyệt của chúng tôi thực hiện truy vấn DNS để lấy địa chỉ IP của https://www.enjoyalgorithm.com. Nếu https://www.enjoyalgorithm.com sử dụng proxy ngược và định cấu hình chính xác, truy vấn DNS sẽ trả về địa chỉ IP của proxy ngược".
+> "Giả sử, nếu chúng tôi nhập https://www.enjoyalgorithm.com trong trình duyệt của mình, trình duyệt của chúng tôi thực hiện truy vấn DNS để lấy địa chỉ IP của https://www.enjoyalgorithm.com. Nếu https://www.enjoyalgorithm.com sử dụng reverse proxy và cấu hình chính xác, truy vấn DNS sẽ trả về địa chỉ IP của reverse proxy".
 
-Giờ đây, proxy ngược rất tiện lợi khi chúng ta thiết kế một hệ thống phức tạp và nó có thể được sử dụng cho nhiều mục đích, chẳng hạn như:
+Hiện tại, reverse proxy rất tiện lợi khi chúng ta thiết kế một hệ thống phức tạp và nó có thể được sử dụng cho nhiều mục đích, chẳng hạn như:
 
 ![](./assets/purpose.png)
 
-1. Bảo mật: Khi chúng tôi sử dụng proxy ngược, địa chỉ IP máy chủ gốc của trang web sẽ bị tóm tắt khỏi những kẻ tấn công. Vì vậy, để khai thác bất kỳ lỗ hổng nào, các máy khách độc hại không thể truy cập trực tiếp vào chúng. Nhiều máy chủ proxy ngược bao gồm các tính năng giúp bảo vệ máy chủ phụ trợ chống lại các cuộc tấn công từ chối dịch vụ (DDoS) phân tán, chẳng hạn như từ chối lưu lượng truy cập từ các địa chỉ IP cụ thể của máy khách (danh sách đen) hoặc giới hạn số lượng yêu cầu được chấp nhận từ mỗi máy khách.
-2. Cân bằng tải: Một trang web với hàng triệu người dùng truy cập mỗi ngày có thể khó xử lý lượng truy cập khổng lồ như vậy với một máy chủ duy nhất. Thay vào đó, chúng tôi có thể sử dụng nhiều máy chủ và sử dụng proxy ngược như một giải pháp cân bằng tải để phân phối lưu lượng giữa các máy chủ và ngăn bất kỳ máy chủ nào bị quá tải.
-3. Bộ nhớ đệm: Một proxy ngược cũng có thể được sử dụng để lưu các yêu cầu vào bộ đệm, dẫn đến hiệu suất nhanh hơn.
+1. Bảo mật: Khi chúng tôi sử dụng reverse proxy, địa chỉ IP server gốc của trang web sẽ bị ẩn khỏi những kẻ tấn công. Vì vậy, để khai thác bất kỳ lỗ hổng nào, các client độc hại không thể truy cập trực tiếp vào chúng. Nhiều reverse proxy bao gồm các tính năng giúp bảo vệ backend chống lại các cuộc tấn công từ chối dịch vụ phân tán (DDoS), chẳng hạn như từ chối lưu lượng truy cập từ các địa chỉ IP cụ thể của client (danh sách đen) hoặc giới hạn số lượng yêu cầu được chấp nhận từ mỗi client.
+2. Cân bằng tải: Một trang web với hàng triệu người dùng truy cập mỗi ngày có thể khó xử lý lượng truy cập khổng lồ như vậy với một server duy nhất. Thay vào đó, chúng tôi có thể sử dụng nhiều server và sử dụng reverse proxy như một giải pháp cân bằng tải để phân phối lưu lượng giữa các server và ngăn bất kỳ server nào bị quá tải.
+3. Bộ nhớ đệm: Một reverse proxy cũng có thể được sử dụng để lưu các yêu cầu vào bộ đệm, dẫn đến hiệu suất nhanh hơn.
 
 #### Nhược điểm của Reverse Proxy
 
-Các proxy ngược không phải lúc nào cũng hữu ích và nó có những hạn chế riêng:
-1. Thêm ngược proxy vào kiến trúc làm tăng độ phức tạp của hệ thống của chúng tôi.
-2. Một proxy ngược duy nhất có thể hoạt động như một điểm lỗi duy nhất và việc thêm nhiều proxy ngược sẽ làm tăng độ phức tạp hơn nữa.
-3. Khi chúng tôi sử dụng các kết nối không được mã hóa tới máy chủ proxy, máy chủ có thể sửa đổi các phản hồi mà chúng tôi nhận được, dù tốt hay xấu, theo cả hai cách.
-4. Ngay cả sau khi sử dụng kết nối hoặc mạng được mã hóa, dữ liệu hoặc thông tin của chúng tôi có thể bị rò rỉ bằng kỹ thuật ** kết nối được mã hóa TLS và SSL **
+Các reverse proxy không phải lúc nào cũng hữu ích và nó có những hạn chế riêng:
+1. Thêm reverse proxy vào kiến trúc làm tăng độ phức tạp của hệ thống của chúng tôi.
+2. Một reverse proxy duy nhất có thể hoạt động như một điểm lỗi duy nhất và việc thêm nhiều reverse proxy sẽ làm tăng độ phức tạp hơn nữa.
+3. Khi chúng ta sử dụng các kết nối không được mã hóa tới proxy, server có thể sửa đổi các phản hồi mà chúng ta nhận được, dù tốt hay xấu.
+4. Ngay cả sau khi sử dụng kết nối hoặc mạng được mã hóa, dữ liệu hoặc thông tin của chúng ta có thể bị rò rỉ bằng kỹ thuật kết nối được mã hóa **TLS và SSL**
 
 ## Reverse Proxy so với Load Balancer
 
-Máy chủ proxy ngược và bộ cân bằng tải là các thành phần trong thiết kế hệ thống máy khách-máy chủ. Trong tương tác giữa máy khách và máy chủ, cả hai đều đóng vai trò trung gian, thực hiện các chức năng tăng cường hiệu quả.
+Reverse proxy và bộ cân bằng tải là các thành phần trong thiết kế hệ thống client-server. Trong tương tác giữa client và server, cả hai đều đóng vai trò trung gian, thực hiện các chức năng tăng cường hiệu quả.
 
-Bộ cân bằng tải phân phối các yêu cầu máy khách đến giữa một nhóm máy chủ, trả lại phản hồi cho máy khách thích hợp từ máy chủ đã chọn trong từng trường hợp. Khi một trang web cần nhiều máy chủ, bộ cân bằng tải thường được triển khai nhất vì khối lượng yêu cầu quá nhiều để xử lý hiệu quả cho một máy chủ duy nhất. Một điểm lỗi duy nhất làm cho trang web trở nên đáng tin cậy hơn và cũng bị loại bỏ bằng cách triển khai nhiều máy chủ. Công việc của bộ cân bằng tải là phân phối các yêu cầu theo cách sử dụng tốt nhất khả năng của từng máy chủ, tránh quá tải trên bất kỳ máy chủ nào và dẫn đến phản hồi nhanh nhất có thể của máy khách.
+Bộ cân bằng tải phân phối các yêu cầu client đến giữa một nhóm server, trả lại phản hồi cho client thích hợp từ server đã chọn trong từng trường hợp. Khi một trang web cần nhiều server, bộ cân bằng tải thường được triển khai nhất vì khối lượng yêu cầu quá nhiều để xử lý hiệu quả cho một server duy nhất. Một điểm lỗi duy nhất cũng bị loại bỏ bằng cách triển khai nhiều server. Công việc của bộ cân bằng tải là phân phối các yêu cầu theo cách sử dụng tốt nhất khả năng của từng server, tránh quá tải trên bất kỳ server nào và dẫn đến phản hồi nhanh nhất có thể cho client.
 
-Cân bằng tải
+### Cân bằng tải
 
 ![](./assets/vs.png)
 
-Một proxy ngược chấp nhận một yêu cầu từ một máy khách hoặc một nhóm máy khách, chuyển tiếp nó đến một máy chủ và trả lại phản hồi của máy khách từ máy chủ. Trong khi việc triển khai bộ cân bằng tải chỉ có ý nghĩa khi bạn có nhiều máy chủ, thậm chí chỉ với một máy chủ web hoặc máy chủ ứng dụng, việc triển khai proxy ngược thường có ý nghĩa.
+Một reverse proxy chấp nhận một yêu cầu từ một client hoặc một nhóm client, chuyển tiếp nó đến một server và trả lại phản hồi của client từ server. Trong khi việc triển khai bộ cân bằng tải chỉ có ý nghĩa khi bạn có nhiều server, thì thậm chí chỉ với một web server hoặc app server, việc triển khai proxy vẫn có ý nghĩa.
